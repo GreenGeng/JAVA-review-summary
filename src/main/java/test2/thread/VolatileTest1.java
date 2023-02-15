@@ -1,4 +1,4 @@
-package test2;
+package test2.thread;
 
 public class VolatileTest1 {
     public static void main(String[] args) {

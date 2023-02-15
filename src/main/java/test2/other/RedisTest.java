@@ -1,4 +1,4 @@
-package test2;
+package test2.other;
 
 public class RedisTest {
     /**
