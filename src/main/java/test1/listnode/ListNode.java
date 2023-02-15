@@ -1,7 +1,5 @@
 package test1.listnode;
 
-import java.util.List;
-
 public class ListNode {
     int val;
     ListNode next = null;

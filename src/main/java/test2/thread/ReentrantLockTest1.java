@@ -11,6 +11,8 @@ public class ReentrantLockTest1 {
      * 可重入锁的意思就是
      * 同一个线程在外层方法获取到锁的时候 内层方法会自动获取锁 不需要等待外层方法释放锁
      *
+     *、reentrantlock的缺点
+     * 不能保证原子性
      *
      */
     private static final ReentrantLock lock = new ReentrantLock();

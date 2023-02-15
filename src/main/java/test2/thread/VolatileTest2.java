@@ -25,7 +25,20 @@ public class VolatileTest2 {
 class MyThread implements  Runnable{
 //    public  volatile static int counter = 0;
     /**
-        多线程环境下volatile会出问题 就使用Atomic原子类代替
+     多线程环境下volatile会出问题 就使用Atomic原子类代替(Atomic就是CAS)
+     Atomic类的缺点：
+     ABA问题
+     CAS会自旋浪费CPU资源
+
+     为什么volatile不保证原子性?
+     修改volatile变量：
+     先读取volatile变量到本地
+     修改变量
+     把值写回去、
+     这些都是线程不安全的 其他线程也可操作 原子性是要通过锁来保证、
+
+
+
      *
       */
 
