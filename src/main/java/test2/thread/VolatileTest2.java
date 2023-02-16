@@ -38,6 +38,8 @@ class MyThread implements  Runnable{
      这些都是线程不安全的 其他线程也可操作 原子性是要通过锁来保证、
 
 
+     为什么自旋锁可以保证原子性？
+     因为他调用了底层的unsafe类里的native方法 JAVA直接操作CPU指令
 
      *
       */

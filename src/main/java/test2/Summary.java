@@ -27,6 +27,15 @@ public class Summary {
     //堆排序
     //A记录
     //红黑树
+    // redis分布式锁
+    //布隆过滤器
+    //springcloud
+    //消息队列
+    //nginx怎么负载均衡
+    // springbean的生命周期
+    // 什么时候用单例
+    //rdb和aof怎么配合使用
+
 
 
 }
