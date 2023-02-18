@@ -28,7 +28,7 @@ public class Test1 {
      * topic类似库名
      * MQ不做业务 只放数据和解耦
      *
-     * GateWay
+     * Gateway
      * 网关，也可以做限流 可以对API进行分组限流
      * 使用是在配置文件里配routes
      * 也可以在nacos里配置限流，或者自定义类限流
@@ -40,7 +40,7 @@ public class Test1 {
      *
      *
      *
-     * 发布订阅
+     * 发布订阅模式
      *
      */
 }
