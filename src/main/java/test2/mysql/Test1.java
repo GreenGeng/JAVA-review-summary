@@ -11,5 +11,9 @@ public class Test1
      * select * from 表 lock in share node 读锁
      *
      *
+     * 实现可重复读
+     * 使用MVCC
+     * 可重复读隔离级别下，事务在启动之前读的是整个库的快照
+     * 
      */
 }
