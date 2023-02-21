@@ -11,9 +11,14 @@ public class Test1
      * select * from 表 lock in share node 读锁
      *
      *
-     * 实现可重复读
-     * 使用MVCC
-     * 可重复读隔离级别下，事务在启动之前读的是整个库的快照
+     * 慢sql怎么优化
+     * 先看type是不是all 在看key 如果是null就没有用到索引
+     * 然后在看rows 数值越大 扫描的行数就越多
+     * 然后在看Extra 避免出现Using filesort或Using temporary这样的字眼
+     *
+     * mysql调优
+     * 用explain看有没有命中索引（type列+key列）
+     * 然后看语法
      * 
      */
 }

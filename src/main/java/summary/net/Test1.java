@@ -22,5 +22,8 @@ public class Test1 {
      * cookie的属性有哪些：域名，路径，maxAge（有效值 如果为0就是删除），version
      *
      *
+     * 分布式session
+     *
+     *
      */
 }
