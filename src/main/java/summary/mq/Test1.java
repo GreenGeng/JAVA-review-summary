@@ -5,41 +5,14 @@ import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.remoting.exception.RemotingException;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
-import summary.thread.ThreadPoolTest3;
-
-import java.util.concurrent.ThreadPoolExecutor;
 
 public class Test1 {
     /**
-     * rocketmq
-     * MQ 异步 解耦 削峰
-     * 异步：非阻塞 提高效率
-     * 解耦：减少服务之间的影响，提高系统的稳定性
-     * 削峰：对抗流量冲击
-     *
-     * MQ缺点：系统复杂性提高、消息一致性问题、系统稳定性降低
-     * 消息丢失、重复调用、消息的顺序性
-     *
-     * kafka功能单一、会丢数据
      *
      * 生产者要shutdown
      * 里面的tag表示过滤
-     *
-     * 生产者三种方式发送消息：
-     * 同步、异步、单向
-     * 同步是生产者给Broker发消息 等待Broker返回信息再继续
-     * 异步是 生产者先只管给Broker发消息，发完再挨个返回消息的状态
-     * 单向是 生产者只管给Broker发消息 不管后续
-     *
-     * 消费者消费的两种方式
-     * 主动去Broker节点拉取数据
-     * 等待Broker发消息推过来
-     * 主动拉要shutdown
-     * 被动不要
-     *
+
      * 启动顺序：先启动nameserver，再启动broker
-     *
      * 在实现类上面加@Service
      *
      * 消息队列的使用
@@ -100,6 +73,8 @@ public class Test1 {
      * 先修改版本号+1
      * 用mybatis反向工程里的Example.Criteria去查询旧版的数据
      * 然后使用updatedByExampleSelective（这个方法就是更新字段）修改为新值
+     * 要不然就是根据之前版本号查询 更新的时候给版本号加一
+     *
      *
      *
      * 雪花算法

@@ -18,5 +18,16 @@ public class ThreadPoolTest3 {
      * 循环判断任务是否为空，如果不为空，就执行任务，为空就退出循环
      * 执行processWorker方法，把工作线程移除
      *
+     *
+     *
+    //为什么不用Executors创建线程池
+    * 因为fixed和SingleThreadPool允许请求队列的长度为Integer.MAX_VALUE会堆积大量请求导致OOM
+     * fixed和Single都使用的是LinkedBlockingQueue 是链表实现的有界阻塞队列 容量可以设置可以不设置，如果没有设置容量
+     * 就是默认最大值，就会出现OOM，如果是数组实现的有界队列，就必须要设置容量，
+     * Cached和ScheduledThreadPool允许创建的线程数量为Integer.MAX_VALUE 创建大量线程导致OOM
+     *
+    //多线程和异步的区别
+     *
+     *
      */
 }

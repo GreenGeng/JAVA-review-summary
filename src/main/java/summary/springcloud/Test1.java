@@ -38,9 +38,5 @@ public class Test1 {
      * gateway网关，在nacos或者自己的配置文件里配置
      *
      *
-     *
-     *
-     * 发布订阅模式
-     *
      */
 }
