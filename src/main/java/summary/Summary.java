@@ -4,6 +4,7 @@ public class Summary {
     //面试笔记
 
     //-------------------------------------------------------------------基础
+    // 类与类之间是单继承 接口与接口之间是多继承
     // stringbuffer（安全） 和 stringbuilder（不安全）
     // arrayList怎么扩容
     // Hashcode的返回值(int)
@@ -35,6 +36,10 @@ public class Summary {
     // 线程池 的工作流程
     // Sleep wait
     // Thread的sleep会进入什么状态
+    //如何查看线程死锁
+    // Threadlocal里的entry
+    //threadlocal内存泄漏
+    //  线程之间如何通信
     //--------------------------------------------------------------------mysql+数据库
     //事务隔离级别怎么解决事务的问题
     //怎么加行锁
@@ -89,7 +94,6 @@ public class Summary {
     //第三次握手没收到怎么办（重发？还有呢）
     // Tcp限流 滑动窗口
     // Tcp客户端没有找到服务端 他的状态机是什么
-    //threadlocal内存泄漏
     // Tcp可靠性保障
     // 拥塞控制
 
@@ -109,7 +113,7 @@ public class Summary {
     // 线程池里的线程工厂怎么使用
     //线程池里多余的线程是怎么回收的
     // Countdownlatch任务失败怎么办
-    // Threadlocal里的entry
+
     // 阻塞队列
 
 
