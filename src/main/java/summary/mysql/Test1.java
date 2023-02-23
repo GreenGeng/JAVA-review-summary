@@ -14,7 +14,7 @@ public class Test1
      * 慢sql怎么优化
      * 先看type是不是all 在看key 如果是null就没有用到索引
      * 然后在看rows 数值越大 扫描的行数就越多
-     * 然后在看Extra 避免出现Using filesort或Using temporary这样的字眼
+     * 然后在看Extra（额外信息 如排序等） 避免出现Using filesort或Using temporary这样的字眼
      *
      * mysql调优
      * 用explain看有没有命中索引（type列+key列）
@@ -33,6 +33,18 @@ public class Test1
      * 页锁：会死锁
      * 行锁：加锁慢、会死锁、粒度最小
      * 死锁：因争夺资源而相互等待
+     *
+     *
+     * 聚簇与非聚簇
+     * 都是b+树的结构
+     * 聚簇：数据和索引存放在一起，并且是有序的
+     * 非：叶子节点不存放数据，存储的是数据行的地址
+     * 主键一定是聚簇索引
+     * 聚簇
+     * 优点：查询快，适合范围查询
+     * 缺点：
+     *
+     *
      *
      * 
      */
