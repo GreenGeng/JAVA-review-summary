@@ -19,7 +19,19 @@ public class TransactionTest1 {
      * 修改隔离级别为可重复读
      *
      * 怎么解决幻读
-     * 事务读取的时候加间隙锁 就不能修改行数
+     * MVCC加间隙锁的方式
+     * 在快照读的情况下 mysql通过mvcc来避免幻读
+     * （快照读：只读不修改 就不加锁）
+     * 在当前读的情况下 mysql通过间隙锁来避免幻读 锁住某条件下的数据不能改
+     * （当前读：在修改之前读  就要给读加锁 for update 或者 lock in share mode）
+     * for update 是排他锁
+     * lock in share mode是共享锁
+     * 共享锁和排他锁都是悲观锁 就是加锁过程中 其他事务都不能参与修改 读也不行 除非事务提交
+     *
+     *
+     * next-key lock:间隙锁
+     * 间隙锁就是给某个范围加锁
+     *
      *
      * 实现可重复读
      *  使用MVCC
