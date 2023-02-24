@@ -1,6 +1,6 @@
 package summary.jvm;
 
-public class Test2 {
+public class Summary2 {
 
 
     /**

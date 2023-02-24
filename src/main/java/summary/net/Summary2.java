@@ -1,6 +1,6 @@
 package summary.net;
 
-public class Test2 {
+public class Summary2 {
     /**
      * 单点登陆
      * 方法1 用户登入一个模块后 把session存储到服务器 然后把该session往别的模块到服务器都复制一份 登陆时候就不用重新登陆

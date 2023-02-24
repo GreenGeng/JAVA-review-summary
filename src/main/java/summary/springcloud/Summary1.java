@@ -1,6 +1,6 @@
 package summary.springcloud;
 
-public class Test1 {
+public class Summary1 {
     /**
      *Nacos 服务中心，服务注册+服务发现（在一个压缩包里自己手动启动）
      * DiscoveryClient方法是可以Get到服务中心里所有注册的服务

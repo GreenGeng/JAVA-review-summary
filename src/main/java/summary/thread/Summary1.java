@@ -1,6 +1,6 @@
 package summary.thread;
 
-public class Test1 {
+public class Summary1 {
     /**
      *
      * 线程池的工作流程

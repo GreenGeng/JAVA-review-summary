@@ -1,6 +1,6 @@
 package summary.mq;
 
-public class Test2 {
+public class Summary2 {
     /**
      * 消息队列幂等性
      *

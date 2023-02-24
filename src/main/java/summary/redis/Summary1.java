@@ -1,6 +1,6 @@
 package summary.redis;
 
-public class Test1 {
+public class Summary1 {
     /**
      * rdb和aof怎么配合使用
      * 使用rdb恢复内存状态会丢失大量数据

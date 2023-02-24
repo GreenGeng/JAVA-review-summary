@@ -1,9 +1,6 @@
 package summary.springcloud;
 
-import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.context.annotation.Bean;
-
-public class Test2 {
+public class Summary2 {
     /**
      * 服务之间的远程调用：
      * 基于HTTP的RestFul 和 基于TCP的RPC协议

@@ -1,6 +1,6 @@
 package summary.jvm;
 
-public class Test1 {
+public class Summary1 {
     /**
      * 常见的垃圾回收算法
      * 标记清除：标记引用的对象，没有被饮用的就是垃圾对象

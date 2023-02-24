@@ -6,7 +6,7 @@ import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.remoting.exception.RemotingException;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 
-public class Test1 {
+public class Summary1 {
     /**
      *
      * 生产者要shutdown
