@@ -32,7 +32,7 @@ public class Spring {
      * @Autowired通过三级缓存来解决循环依赖的
      *
      *
-     * JDK 动态代理和AOP
+     * JDK 动态代理和AOP的实现
      *
      *
      *
