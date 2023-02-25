@@ -3,6 +3,8 @@ package summary.mysql;
 public class Summary1
 {
     /**
+     * eq_ref:唯一索引
+     * ref:非唯一索引
      *
      * mysql怎么加行锁
      * 表中创建索引，select where 后面必须是索引，不然行锁无效
@@ -50,7 +52,6 @@ public class Summary1
      * 看explain里如果使用了索引 并且extra里是using where 就是回表
      *
      *
-     * 试一下最左前缀
      *
      *
      *
