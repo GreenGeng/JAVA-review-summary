@@ -11,7 +11,9 @@ public class Mybatis1 {
      * limit no,size
      *
      *
-     *
+     * 实现原理
+     * 通过读取全局配置文件和mapper映射文件，构造了SQLsessionFactory工厂，创建了SQLsession会话
+     * 通过底层的Executor来执行数据库（缓存也是走Executor执行器）
      *
      *
      *

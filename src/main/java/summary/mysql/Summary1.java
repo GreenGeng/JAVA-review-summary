@@ -50,6 +50,9 @@ public class Summary1
      * 看explain里如果使用了索引 并且extra里是using where 就是回表
      *
      *
+     * 试一下最左前缀
+     *
+     *
      *
      *
      *
