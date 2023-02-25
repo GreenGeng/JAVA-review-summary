@@ -2,19 +2,24 @@ package summary.spring;
 
 public class Spring {
     /**
-     * spring bean生命周期
-     * 推断构造方法
-     * 实例化、
-     * 依赖注入
-     * 处理Aware接口回调
-     * 处理@PostContruct接口
-     * 初始化 处理inintingBean接口
-     * 初始化后 进行AOP
+     * springbean生命周期
+     * 创建实例，实例化bean
+     * 属性注入 实现实现aware接口（方便获取spring上下文核心组件）
+     *  前置方法 @PostContruct修饰的方法
+     *  实例化方法
+     *  后置方法
+     * 初始化
+     * 使用
+     * 销毁（destroy和DisposableBean）
+     * （实例只是创建一个对象 初始化是赋值）
      *
-     * springboot怎么解决循环依赖
+     *
+     *
      *
      *
      * spring事务 @Transaction
+     *
+     *
      *
      *
      * springboot自动装配的原理
@@ -27,6 +32,7 @@ public class Spring {
      * @Autowired通过三级缓存来解决循环依赖的
      *
      *
+     *AOP
      *
      *
      *
