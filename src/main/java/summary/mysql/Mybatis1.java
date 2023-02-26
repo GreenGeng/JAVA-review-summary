@@ -19,7 +19,6 @@ public class Mybatis1 {
      * 缓存（先二级 再一级 因为二级的范围比一级大）
      * mybatis缓存设计：装饰器模式
      * 一级缓存：sqlseesino级别
-     * 二级缓存：sqlsessionFactory对象缓存
-     *
+     * 二级缓存：sqlsessionFactory对象缓存 是mapper映射级别的缓存 多个sqlsession共享     *
      */
 }
