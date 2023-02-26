@@ -32,7 +32,10 @@ public class Spring {
      * @Autowired通过三级缓存来解决循环依赖的
      *
      *
+     *
      * JDK 动态代理和AOP的实现
+     * 实现InvocationHandler接口重写invoke方法
+     * 通过反射的方式创建动态代理对象Proxy.newProxyInstance
      *
      *
      *

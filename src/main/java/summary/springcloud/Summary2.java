@@ -43,7 +43,7 @@ public class Summary2 {
      feign如何实现服务之间的远程调用
      开启feign：@FeignClient和@EnableFeignCLient
      @EnableFeignClient会扫描所有被@FeignClient注解修饰的接口
-     -并把他们信息注入到IOC容器中
+     -并把他们信息注入到IOC容器中(@FeignClient里的属性信息 name、url、path、fallback回调等)
      -当接口中的方法被调用时
      通过JDK动态代理方式，生成具体的RequestTemplate
      这个对象里封装了HTTP请求需要的全部信息
