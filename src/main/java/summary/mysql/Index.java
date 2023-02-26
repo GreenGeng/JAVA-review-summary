@@ -48,8 +48,24 @@ public class Index {
      * 优点 单个值查找速度快 范围查询慢
      *
      * 索引覆盖
-     * 只通过查询索引就获取到数据
-     * type是inded
+     * 避免回表
+     * 如果一个索引包含了所有需要查询的字段的值 不需要回表 就是覆盖索引
+     * extra是using index就是覆盖索引
+     *
+     * 索引下推
+     * 索引遍历时候 对包含的字段先判断 过滤掉不符合条件的记录 减少回表次数
+     * （例如 select * from user where name like "张%" and age = 10）
+     * 之前是先在辅助索引里查name 再去主键索引里过滤age
+     * 下推是先在辅助索引里过滤age和name 后面再查主键索引
+     *
+     *
+     * extra指标
+     * using index 索引覆盖
+     * using where 全表扫描(没有用到索引)
+     * using temporary 使用了临时表（group by）
+     *
+     *
+     *
      *
      *
      * > 、!+、order by、(主键除外) 会不能命中索引

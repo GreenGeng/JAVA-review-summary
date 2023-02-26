@@ -13,6 +13,11 @@ import java.lang.reflect.Proxy;
 public class JDKDynamicProxy implements InvocationHandler {
     private Object obj;
     /**
+     * 总结：
+     * 实现InvocationHandler接口重写invoke方法
+     * 通过Proxy反射生成动态代理对象
+     * 代理对象去调用invoke方法
+     *
      * 生成代理对象实例
      *
      */
