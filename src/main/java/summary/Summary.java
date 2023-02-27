@@ -124,5 +124,10 @@ public class Summary {
     // springboot加载顺序
     // spring事务 @Transaction AOP
 
+    // @Todo 后期有时间把编译原理看了（考研也需要）
+    // @Todo 每天都要保证力扣 后期这个git也要维护
+    // @Todo 没事时候去B站上找一些八股文面试视频 看看这些视频就能发现还是有很多技术细节不了解
+
+
 
 }
