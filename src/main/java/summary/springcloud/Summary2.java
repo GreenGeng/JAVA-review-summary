@@ -53,7 +53,11 @@ public class Summary2 {
 
 
 
-
+     feign里的属性介绍
+     name（value）:调用的服务名称
+     path:访问接口的统一前缀
+     url:指定服务的地址
+     configuration:feign配置类
 
 
 

@@ -41,6 +41,20 @@ class MyThread implements  Runnable{
      为什么自旋锁可以保证原子性？
      因为他调用了底层的unsafe类里的native方法 JAVA直接操作CPU指令
 
+     volatile可见性
+
+
+     怎么保证不会重排序
+     内存屏障有两种
+     读屏障：强制从主存里获取数据
+     写屏障：强制将数据刷到主存里
+
+
+     什么时候适合用volatile
+     双重锁检查的时候
+     赋值给状态标志（含有运算的做好不要使用volatile）
+
+
      *
       */
 

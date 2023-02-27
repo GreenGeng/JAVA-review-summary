@@ -29,7 +29,20 @@ public class Spring {
      *
      *
      * 循环依赖
-     * @Autowired通过三级缓存来解决循环依赖的
+     * A创建-》依赖B-》B创建-》依赖A
+     * 构造器循环依赖是无法解决的
+     * 三级缓存
+     * 一级：singletonObjects 缓存的是已经经历里完整生命周期的bean对象
+     * 二级：earlySingletonObjects 缓存的是还没经历完整个生命周期的bean对象
+     * 三级：singletonFactories 缓存的是ObjectFactory对象工厂
+     *
+     * A创建--》把A加缓存里--》依赖B--》创建B--》依赖A--》从缓存拿A--》B创建完成--》注入到A里--》结束
+     * A在创建时候 在依赖注入之前 把A放到二级缓存里 然后再依赖注入 此时依赖B 就去创建B 因为B依赖A 就去
+     * 缓存里找A 找到之后 B创建完成 注入到A里 结束
+     *
+     *
+     *
+     *
      *
      *
      *

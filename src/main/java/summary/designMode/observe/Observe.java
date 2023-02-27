@@ -1,13 +1,12 @@
 package summary.designMode.observe;
 
-import java.util.List;
 
 public class Observe {
     /**
      * 观察者
      * 发布订阅
-     * 订阅者
-     * 发布者
+     * 收到通知的 就是 一对多关系里 多的那个就是观察者也就是订阅者
+     * 1是发布者 多是订阅者
      *
      */
 

@@ -7,8 +7,10 @@ public class Summary1 {
      * 就是corePoolSize、maxPoolSize、和阻塞队列的关系
      *
      * Sleep wait
-     * wait需要在同步上下文中调用，用notify唤醒，是实例方法，会释放锁 线程阻塞
-     * sleep不需要，超时就能唤醒，静态方法，不释放锁 线程阻塞
+     * wait需要在同步上下文中调用，用notify唤醒，是实例方法，会释放锁 线程阻塞 会释放CPU
+     * sleep不需要，超时就能唤醒，静态方法，不释放锁 线程阻塞 会释放CPU
+     * 线程阻塞 就会让出CPU 让CPU去执行其他线程 不然一直占着CPU浪费资源
+     *
      *
      * Thread的sleep会进入什么状态
      * 阻塞态，因为就绪态的话，CPU是随时可以调度的，在sleep这段时间，cpu调度不到该线程，所以是阻塞态，
@@ -32,6 +34,24 @@ public class Summary1 {
      * 自旋锁次数过多都没有获得锁就会成为重量级锁 导致线程阻塞
      *
      *
+     * 线程池里的线程个数怎么设置
+     * CPU密集型（CPU参与的时间较多） ：CPU核数+1
+     * IO密集型（IO比较多）：CPU*2
+     * 混合型
+     *
+     * IO：磁盘IO、网络IO
+     * 磁盘IO：文件读写、数据库读写
+     * 网络IO：发请求
+     *
+     *
+     *
+     * yield和sleep的区别
+     * 两者很像  都是放弃当前CPU
+     * sleep让给其他线程运行是不考虑线程优先级的 yield只会让给相同或者更高优先级的线程
+     * sleep进入阻塞状态 yield是就绪状态可能很快就又能执行
+     * sleep会抛异常 yield没有声明抛异常
+     *
+     * IO多路复用
      *
      *
      */

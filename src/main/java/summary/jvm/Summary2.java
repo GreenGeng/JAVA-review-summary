@@ -36,6 +36,13 @@ public class Summary2 {
      *  减少内存开销
      *
      *
+     *  OOM
+     *
+     *
+     *  栈溢出
+     *
+     *
+     *
      *
      */
 }
