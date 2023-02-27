@@ -1,11 +1,5 @@
-package summary.thread;
+package summary.designMode.singleton;
 
-public class VolatileTest1 {
-    public static void main(String[] args) {
-
-
-    }
-}
 //双重检查锁
 class Singleton{
     /**

@@ -23,8 +23,6 @@ public class Summary1 {
      * 线程之间如何通信
      *
      *
-     *
-     *
      * 偏向锁
      * 在锁对象的对象头里会记录当前获取到锁的线程ID 下次该线程在来获取锁就可以直接获取
      * 轻量级锁
@@ -58,6 +56,9 @@ public class Summary1 {
      * BIO阻塞 相当于synchronized
      * NIO 相当于自旋
      *
+     *
+     * 线程池里多余的线程
+     * 在keepAliveTime结束后就会被回收
      *
      *
      *
