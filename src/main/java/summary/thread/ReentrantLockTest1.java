@@ -21,11 +21,9 @@ public class ReentrantLockTest1 {
         //可重入锁
         lock.lock();
         try{
-
             System.out.println("main获得锁");
             m1();
         }catch (Exception e){
-
         }finally {
             lock.unlock();
             System.out.println("main释放");

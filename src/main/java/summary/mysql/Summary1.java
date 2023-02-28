@@ -3,7 +3,7 @@ package summary.mysql;
 public class Summary1
 {
     /**
-     * eq_ref:唯一索引
+     * eq_ref:唯一索引---
      * ref:非唯一索引
      *
      * mysql怎么加行锁

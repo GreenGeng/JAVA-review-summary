@@ -100,9 +100,7 @@ public class Summary {
     //堆排序
     //红黑树
 
-    //G1垃圾回收器
     // 拦截器和过滤器谁先执行、过滤器和拦截器的区别、
-    // Mirror gc和full gc
 
     // 拥塞控制算法
     //第三次握手没收到怎么办（重发？还有呢）
@@ -119,6 +117,8 @@ public class Summary {
     //线程池里多余的线程是怎么回收的
     // Countdownlatch任务失败怎么办
     // 阻塞队列
+    // lock为什么是乐观锁
+    // syn为什么是非公平锁
 
     //自动装配怎么实现的
     // springboot加载顺序

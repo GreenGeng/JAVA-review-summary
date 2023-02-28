@@ -10,6 +10,7 @@ public class SynchronizedTest1 {
      *
      * 非公平锁 为什么
      *
+     *
      * 非公平锁：获取锁不是按照排序顺序分给线程的
      *
      * notifyall是怎么唤醒所有的

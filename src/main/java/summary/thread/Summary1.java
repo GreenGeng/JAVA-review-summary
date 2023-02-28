@@ -60,7 +60,27 @@ public class Summary1 {
      * 线程池里多余的线程
      * 在keepAliveTime结束后就会被回收
      *
+     * synchronized和lock都是可重入锁 但是lock可以中断 synchronized不行
      *
+     *  synchronized为什么不能中断
+     *  他是在获取锁的阻塞的时候是不能中断的
+     *
+     *  synchronized原理
+     *  主要是通过enter和exit指令，线程遇到enter指令，如果获取锁就计数器+1 没有获取锁就等待
+     *  遇到exit指令 计数器就-1 计数器为0的时候 释放锁
+     *
+     *
+     *  lock是乐观锁 为什么
+     * 乐观锁的实现主要是：CAS机制和版本号机制
+     * 悲观锁 一个时间点只有一个线程可以获取锁 （类似数据库排他锁）
+     * lock是使用cas+volatile实现的
+     *
+     *
+     *  synchronized为什么是非公平锁
+     *
+     *
+     * redis分布式锁里的setnx和cas挺像的
+     *（cas vab）
      *
      */
 }

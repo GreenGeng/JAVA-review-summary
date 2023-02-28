@@ -1,31 +1,31 @@
 package summary.thread;
 
+
+
 public class Test1 {
+    static int count = 0;
 
-    private  int count;
-    public static void main(String[] args) {
-
-        Test1 test  = new Test1();
-        Thread t1 = new Thread(()->{
-            for (int i = 0; i < 1000; i++) {
-                test.add();
-            }
+    public static void main(String[] args) throws InterruptedException {
+        Thread t1 = new Thread(() -> {
+            add();
         });
 
-        Thread t2 = new Thread(()->{
-            for (int i = 0; i < 1000; i++) {
-                test.add();
-            }
+        Thread t2 = new Thread(() -> {
+            add();
         });
-
         t1.start();
         t2.start();
-        System.out.println(test.count);
+        //暂停当前线程
+        Thread.sleep(300);
+        System.out.println(count);
+    }
+
+    public synchronized static void add(){
+        for (int i = 0; i < 10000; i++) {
+            count++;
+        }
     }
 
 
-    public synchronized void add(){
-        count++;
-    }
 
 }
