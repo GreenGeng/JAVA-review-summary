@@ -13,13 +13,57 @@ public class Summary2 {
      * 这个指令相当于一个内存屏障
      * 作用是不会把后面的指令排在内存屏障之前
      * 不会把前面的指令排在内存屏障之后
-     * 他会强制把值刷到主内存
+     * https://www.codenong.com/cs106038681/
+     *
+     *
+     *  cpu和内存之间是不能直接交互数据的 是通过总线交互的
+     *  主存存共享 线程之间有自己的工作内存
      *
      *
      *
      *  为什么要禁止重排序
      *  禁止CPU执行指令的时候重排
      *  避免在多线程环境下程序出现错乱执行的现象
+     *
+     *
+     *  volatile怎么保证可见性
+     *  lock指令会将当前行数据刷新到主存里
+     *  根据缓存一致性，其他线程内存中存储的该变量的值就会失效
+     *  然后重新从主存里获取最新的值
+     *
+     *
+     *
+     *
+     *  synchronize怎么保证原子性
+     *  保证同一个时间内只有一个线程能拿到锁
+     *  monitorenter和monitorexit指令
+     *  遇到moniterenter指令的时候 如果线程获取到锁 锁的计数器就会+1
+     *  如果没有获取到锁就会一直循环等待
+     *  遇到monitorenter指令的时候 锁的计数器-1
+     *  如果锁的计数器为0 就会释放锁
+     *  所以之后有一个线程能获取到锁 因为只有获取到锁+1 没有获取到就等待
+     *  （类似setnx里的给key赋值）
+     *
+     *
+     *
+     *
+     *  synchronized 怎么可见性
+     *   monitorenter指令后面有一个load屏障 执行refresh操作 会把新值刷新到主存里
+     *   monitorexit指令后面有一个store屏障 让线程把修改到变量执行flush操作 刷到主存里
+     *   monitorenter----load屏障 --refresh
+     *   monitorenter----store屏障---flush
+     *
+     *
+     *  synchronzied怎么有序性
+     *  monitorenter指令和load屏障之后会加一个acquire屏障
+     *  这个屏障是禁止读写操作重排
+     *  monitorexit指令前加一个release屏障也是禁止读写重排
+     *  monitorenter--load屏障--acquire屏障
+     *  release屏障--monitorexit指令
+     *
+     *
+     * ThreadLocal使用场景
+     * 保存线程不安全的工具类
      *
      *
      *
