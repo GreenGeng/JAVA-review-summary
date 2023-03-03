@@ -139,6 +139,8 @@ public class Summary {
     //堆排
     //mysql主从复制
     //单调栈 dfs 动态规划
+    //什么时候用fullGC
+    
 
 
 
