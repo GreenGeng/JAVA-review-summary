@@ -23,6 +23,8 @@ public class TransactionTest1 {
      * 在快照读的情况下 mysql通过mvcc来避免幻读
      * （快照读：只读不修改 就不加锁）
      * 在当前读的情况下 mysql通过间隙锁来避免幻读 锁住某条件下的数据不能改
+     * 为什么要使用间隙锁：在一个数据行范围内防止有新数据插入
+     * next-key lock=行锁+间隙锁
      * （当前读：在修改之前读  就要给读加锁 for update 或者 lock in share mode）
      * for update 是排他锁
      * lock in share mode是共享锁
