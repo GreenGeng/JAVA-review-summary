@@ -19,7 +19,7 @@ public class HashMapTest1 {
        如果够的话 就直接头插 并且要新节点覆盖原节点位置 整体下移
 
         1.7和1.8都是两倍扩容 只是后期数据迁移方式不同
-        1.7需要rehash (数组长度变了)
+        1.7需要rehash (数组长度变了 因为之前的hash是跟新数组长度有关的)
         1.8 要么是原位 要么是原位加旧数组长度（就是隔了一个就的长度）
         1.8尾插+不需要rehash就避免了链表循环
 
@@ -31,10 +31,11 @@ public class HashMapTest1 {
      * 为什么hashtable安全
      * 因为在put和remove方法上加了synchronized锁
      *
+     * CAS在concurrenthashmap的具体体现
+     * 1.7的是使用segments 对每个segment加了锁
+     * 1.8中使用CAS机制来更新数据
      *
-     * @param args
+     *
+     *
      */
-    public static void main(String[] args) {
-
-    }
 }
