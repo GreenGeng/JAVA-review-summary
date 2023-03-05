@@ -34,6 +34,8 @@ public class HashMapTest1 {
      * CAS在concurrenthashmap的具体体现
      * 1.7的是使用segments 对每个segment加了锁
      * 1.8中使用CAS机制来更新数据
+     * 初始化数组的时候就使用了CAS 保证线程安全 （原子性）
+     * put插入的时候 也使用了CAS 如果当前hash里没有元素再插入
      *
      *
      *
