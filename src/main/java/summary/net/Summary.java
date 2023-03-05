@@ -27,8 +27,6 @@ public class Summary {
      * keep-alive就是长链接
      *
      *
-     * 根节点 就是 根服务器 总共13台
-     *
      *
      *
      * 添加 删除 修改 使用post 不是只是添加

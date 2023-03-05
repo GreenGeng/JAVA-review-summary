@@ -65,9 +65,6 @@ public class Index {
      * using temporary 使用了临时表（group by）
      *
      *
-     *
-     *
-     *
      * > 、!+、order by、(主键除外) 会不能命中索引
      *
      *

@@ -20,6 +20,19 @@ public class SynchronizedTest1 {
      *
      * reentrantlock可中断 因为是可重入锁
      *
+     * 什么是可中断 不可中断
+     * 中断锁：锁在执行过程中可中断 就是interrupt不会报错
+     *
+     * 为什么需要中断锁
+     * 如果不可中断 出现异常就会阻塞等待
+     *
+     * syn就是不可中断
+     * lock可中断
+     *
+     * 怎么中断
+     * interrupt()
+     *
+     *
      *
      */
 }

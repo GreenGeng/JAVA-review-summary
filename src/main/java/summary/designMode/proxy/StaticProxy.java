@@ -1,4 +1,4 @@
-package summary.springcloud;
+package summary.designMode.proxy;
 
 public class StaticProxy implements Person {
 

@@ -18,7 +18,7 @@ public class Summary1 {
      *
      *
      * cookie
-     * cookie也是不能跨域的
+     * cookie也是不能跨域的（禁止网站获取其他网站的cookie）
      * cookie的属性有哪些：域名，路径，maxAge（有效值 如果为0就是删除），version
      *
      *
