@@ -31,7 +31,7 @@ public class Test17 {
             return;
         }
         String cur = digits.substring(index,index+1);
-        map.get(cur).length()
+        map.get(cur).length();
         for (int i = 0; i < map.get(cur).length(); i++) {
             sb.append(map.get(cur).charAt(i));
             backtrace(digits,map,index+1,sb);

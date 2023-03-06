@@ -45,6 +45,24 @@ public class ArrayListTest1 {
          *         return this;
          *     }
          *
+         *
+         *
+         *     // linkedlist是线程安全的吗：
+         *     不是 因为add方法里也是有一个size++ 没有加锁
+         *
+         *     为什么arraylist查询快
+         *     因为他存储的数据在内存中是连续的
+         *
+         *
+         *      头插：
+         *      linkedlist比arraylist好 因为arraylist要往后移
+         *      中间插入和尾插
+         *      linkedlist和arraylist都是要遍历 不过插入时候 arraylist要考虑扩容 因为要后移
+         *      所以除了头插 还是用arraylist比较好
+         *
+         *
+         *
+         *
          */
 
 

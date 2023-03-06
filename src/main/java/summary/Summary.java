@@ -4,7 +4,16 @@ public class Summary {
     //面试笔记
 
     //-------------------------------------------------------------------基础
+
+//    Integer a = new Integer(2);
+//    Integer b = new Integer(2);
+//    System.out.println(a==b);// false
+    // 只要是new 都是两个对象 都是false
+    // 如果没有new 在缓存范围里的true 在范围外是false
     //包装类的缓存：-128到127
+
+    // static 静态方法可以访问静态变量 静态方法不能访问非静态变量和调用非静态方法
+    // 实例方法可以调用静态方法 静态方法不能调用实例方法
     // 类与类之间是单继承 接口与接口之间是多继承
     // stringbuffer（安全） 和 stringbuilder（不安全）
     // arrayList怎么扩容
@@ -76,13 +85,16 @@ public class Summary {
     //------------------------------------------------------------------------网络
     // session怎么失效的（设置最大存活时间）
     //whois信息
-    //什么是报文
+    //什么是报文：网络中传输的数据单元
+    // udp报文结构:原端口，目的端口，校验和，UDP长度
     //单点登陆（直接复制session、redis+cookie（用户信息存redis key放cookie里 后端解析cookie去redis里查询）、token）
     //nginx怎么负载均衡
     // 分布式session、
     // Tcp限流 滑动窗口
     // 拥塞控制
     // ping的过程
+    // 什么是syn攻击
+    // 为什么是2msl
 
     //---------------------------------------------------------------------springcloud
     // fign的原理
@@ -143,21 +155,28 @@ public class Summary {
     //单调栈 dfs 动态规划
     //什么时候用fullGC
 
-    //// mysql里join的效率
+    // mysql里join的效率
     // chmod
     // 第三次握手服务器没收到会怎样
     // 半连接队列 全连接队列
     // 哪些握手能带数据
-    // 什么是syn攻击
-    // 为什么是2msl
-    // udp报文结构
     // 数字证书
     // 粘包
     //具体说一下怎么保证tcp传输安全
 
 
+    //来未来
+    //模版模式
+    // treemap 是根据key元素的comparator to实现的
+    // 分布式会用哪些 redis分布式 springcloud
+    // 分布式原理
 
 
+    // mybatis里的扩展组件
+    // mysql线程 怎么执行的
+    // 最左前缀 a b c d 四个字段 只用了 a c是可以的 c a 也是可以的 b c就不行了
+    // a是要在的 并且a是不能范围查的  范围查了 后面都没效了
+    // redis缓存击穿
 
 
 }

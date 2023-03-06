@@ -15,6 +15,12 @@ public class Summary1 {
      * scroll滚动查询 每次查询通过游标移动  但是只能一页一页的往后翻 不能随意跳
      *
      *
+     *  es分页
+     * from size 类似mysql里的limit 默认是10000 from+size超过10000就会报错
+     * 滚动查询 scroll查询  基于快照的形式 会返回一个scroll_id 这个是游标的位置 类似初始位置
+     * 
+     *
+     *
      *
      * 索引
      * 数据文档
@@ -24,7 +30,8 @@ public class Summary1 {
      *
      *
      * es为什么那么快
-     * 倒排索引 FST数据结构
+     * 倒排索引
+     * FST数据结构
      * 前缀树
      *
      *
