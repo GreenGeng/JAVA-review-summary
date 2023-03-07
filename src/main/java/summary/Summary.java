@@ -166,7 +166,7 @@ public class Summary {
 
     //来未来
     //模版模式
-    // treemap 是根据key元素的comparator to实现的
+    // treemap （是红黑树的中序遍历） 是根据key元素的comparator to实现的
     // 分布式会用哪些 redis分布式 springcloud
     // 分布式原理
 
@@ -178,5 +178,8 @@ public class Summary {
 
 
     // ioc的bean加载过程
+
+    //数据库怎么做分布式锁
+
 
 }
