@@ -16,6 +16,23 @@ public class Summary3
      *  又加了一个缓存队列 缓存队列又导致编码顺序乱序问题 然后又加了一个
      *  Store屏障
      *
+     *  Java锁的种类
+     *  synchronized和reentrantlock都是可重入锁
+     *  cas是乐观锁
+     *  synchronized reentrantlock是悲观锁
+     * synchronized是非公平锁
+     * reentrantlock可公平可非公平
+     * synchronized和reentrantlock都是互斥锁
+     *
+     *
+     *
+     * 终止一个线程
+     * stop
+     * interrupt
+     * volatile修饰的flag while(!flag){执行 flag=true停止}
+     *
+     *
+     *
      *
      *
      *

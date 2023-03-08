@@ -64,9 +64,9 @@ public class Summary1 {
      *
      * redis分布式锁
      * 分布式环境下 一个方法在一个时间点只能被一个线程执行
-     * 先创建一个key
-     * 当方法被线程锁住 set lock 线程ID
-     * 如果线程去redis寻找该lock的value是空 就没有加锁 就setnx 赋值并加上过期时间
+     *
+     * 当方法被线程锁住就创建一个记录  set lock 线程ID
+     * 如果线程去redis寻找该lock记录 没有就添加记录 setnx 赋值并加上过期时间
      * 如果不是空 就已经加锁了 就等待（cas）
      *
      *
@@ -89,6 +89,8 @@ public class Summary1 {
      *
      *
      *
+     * 分布式ID
+     * uuid 太长 不适合
      */
 
 

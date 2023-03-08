@@ -6,40 +6,48 @@ import java.util.List;
 import java.util.Map;
 
 public class Test17 {
-       static List<String> res = new ArrayList<>();
-    public static List<String> letterCombinations(String digits) {
-        HashMap<String,String> map = new HashMap<String,String>(){
-            {
-                put("2","abc");
-                put("3","def");
-                put("4","ghi");
-                put("5","jkl");
-                put("6","mno");
-                put("7","pqrs");
-                put("8","tuv");
-                put("9","wxyz");
-            }
-        };
-        backtrace(digits,map,0,new StringBuilder());
-        return res;
-
-    }
-
-    static void backtrace(String digits, Map<String , String> map, int index, StringBuilder sb){
-        if(index==digits.length()){
-            res.add(new StringBuilder(sb).toString());
-            return;
-        }
-        String cur = digits.substring(index,index+1);
-        map.get(cur).length();
-        for (int i = 0; i < map.get(cur).length(); i++) {
-            sb.append(map.get(cur).charAt(i));
-            backtrace(digits,map,index+1,sb);
-            sb.deleteCharAt(sb.length()-1);
-        }
-    }
-
     public static void main(String[] args) {
-        System.out.println(letterCombinations("23"));
+
     }
+
+    public static int removeDuplicates(int[] nums){
+
+        if(nums.length==0) return 0;
+
+        int i=0;
+        for(int j=1;j<nums.length;j++){
+            if(nums[j]!=nums[i]){
+                i++;
+                nums[i] = nums[j];
+            }
+
+        }
+
+
+
+        return i+1;
+    }
+
+    public int search(int[] nums, int target) {
+        int len = nums.length;
+        int l = 0;
+        int r = len-1;
+        while(l < r){
+            int m = (l+r)/2;
+
+            if(nums[m] == target) return m;
+            else if(nums[m] < target) {
+                l = m+1;
+            }
+            else{
+                r = m-1;
+            }
+        }
+
+        return -1;
+
+    }
+
+
 }
+
