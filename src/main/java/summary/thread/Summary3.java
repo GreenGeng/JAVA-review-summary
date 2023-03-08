@@ -32,6 +32,12 @@ public class Summary3
      * volatile修饰的flag while(!flag){执行 flag=true停止}
      *
      *
+     * CPU从程序计数器里获取指令
+     * 程序计数器存储的就是当前指令执行到的字节码的位置
+     *
+     * 线程有自己的空间：栈、ID、程序计数器
+     * 共享进程的区域：数据区、方法区、堆
+     *
      *
      *
      *

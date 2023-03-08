@@ -45,7 +45,8 @@ public class Summary1
      * mysql优化
      * 少用select *
      * 加索引 但是注意like使用要命中索引 选择合适的列 区分度高的列
-     * 减少子查询 因为自查询先查的外表 如果外表很大 效率就会慢 用union代替
+     * 减少子查询 因为要创建临时表 查询完又得删除  速度会影响 用union代替
+     * 少用join join也是嵌套查询 数据量大的话性能就会低
      * 减少join使用
      * or后面的索引不会命中 用in代替or（也可以用union代替or）
      * in可以用exists代替
@@ -80,6 +81,14 @@ public class Summary1
      *
      * 3 使用for update
      * 加悲观锁 读取的时候加悲观锁 别的线程就没办法读
+     *
+     *
+     *
+     *
+     * count(*)返回的是所有
+     * count（列）会过滤null
+     * count(*)和count(1)没什么区别 最好使用count(*)因为这个是规范
+     * 性能： count(主键) > count(*) = count(1)
      *
      *
      *
