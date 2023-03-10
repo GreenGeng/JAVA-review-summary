@@ -193,5 +193,10 @@ public class Summary {
 
     // G1
 
+    //今晚看下CMS
+    // string args[]
+    // 力扣上面的线程题
+    // 最长公共题
+
 
 }
