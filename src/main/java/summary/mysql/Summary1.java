@@ -91,6 +91,18 @@ public class Summary1
      * 性能： count(主键) > count(*) = count(1)
      *
      *
+     * delete drop truncate的区别
+     * delete只删数据不删表结构 可以回滚 delete有where可以删除部分数据
+     * truncate和drop不走事务 删了就找不回数据
+     * drop可以删表
+     * truncate删除所有数据 也可以删表结构
+     *
+     *
+     * A left join  B 返回A的全部
+     * A right join B 返回B的全部
+     *
+     *
+     *
      *
      *
      *

@@ -180,7 +180,11 @@ public class Summary2 {
      *
      *
      *
+     *  tcp首部 固定20字节
+     *  原端口 目的端口 syn ack fin 校验和 窗口
      *
+     *  udp 固定8字节
+     *  原端口 目的端口 长度 校验和
      */
 
 

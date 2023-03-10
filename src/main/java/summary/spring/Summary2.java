@@ -26,6 +26,32 @@ public class Summary2 {
      * springboot自动装配相比spring mvc的优缺点
      *
      *
+     * 反射的优缺点
+     * 缺点：可读性下降 破坏了代码的抽象性（因为他绕过了访问修饰符的限制）
+     * 优点；提高来代码的灵活性，轻松获取到类里的方法和属性
+     * 哪些地方用到了反射
+     * IOC 读取XML文件 然后反射创建对象
+     * AOP 使用Proxy代理类 getInstance动态创建代理对象
+     *
+     *
+     *
+     *
+     *
+     * @Autowired和@Resource
+     * @Autowired默认是按照type装配
+     * @Resource是按照name装配
+     *
+     *
+     * spring AOP原理=》AOP
+     *
+     *
+     *
+     * AOP是面向切面
+     * 动态代理是动态代理
+     * 两个不一样
+     * 但是AOP用到了动态代理
+     *
+     *
      *
      *
      */
