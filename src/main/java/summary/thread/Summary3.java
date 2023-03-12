@@ -46,7 +46,10 @@ public class Summary3
      *
      *
      *
-     *
+     * reentrantlock与CAS的关系
+     * reentrantlock里的lock方法使用了compareAnsSetState(cas)
+     * 如果compareAndSwapSet为true直接获取锁
+     * 否则就acquire尝试去等待获取锁
      *
      *
      *

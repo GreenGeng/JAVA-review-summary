@@ -27,6 +27,19 @@ public class Summary1 {
      *  netty可以自定义协议，基于nio
      *
      *
+     *
+     *  websocket的实现
+     *  先注入 ServerEndpointExporter这个对象是开启websocket
+     *  前端编写ajax 调用后端接口 @ServerEndpoint(value = "/p2p")
+     *  然后里面就是具体的实现
+     *  @OnOpen
+     *  @OnClose
+     *  @OnMessage
+     *  里面的Session就是从前端传递的session
+     *
+     *
+     *
+     *
      *  websocket（不需要前端轮询）
      *  基于TCP，实现了全双工通信
      *  场景：弹幕，实时监控，网页聊天

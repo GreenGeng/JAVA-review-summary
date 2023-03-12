@@ -3,7 +3,7 @@ package summary.thread.threadLocal;
 public class Summary {
     /**
      *
-     * 简述ThreadLocal
+     * 简述ThreadLocal 线程局部变量
      *
      * Map里的Entry是一个JavaBean里面有key 和 value
      *  for(Map.Entry<Integer,Integer> e:map.entrySet()){
@@ -23,6 +23,10 @@ public class Summary {
      *  底层是通过ThreadLocalMap实现的
      *  每个线程对象（不是ThreadLocal对象）都有一个ThreadLocalMap kv格式 key是ThreadLocal对象 value是要缓存的值
      *  应用场景：连接管理
+     *  数据库连接
+     *  把mysql数据库连接存放到ThreadLocal里，控制事务的独立性
+     *
+     *
      *
      *
      *

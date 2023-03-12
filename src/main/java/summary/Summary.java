@@ -199,4 +199,16 @@ public class Summary {
     // 最长公共题
 
 
+
+    //又被问到网络IO了
+    // FileInputStream  FileOutputStream  FileReader FileWriter
+
+
+    //git merge冲突了 就改把冲突改了 改之前问一下别人代码怎么写的
+    // 或者先回退 回到上一个版本 再改 主要把自己的地方改了
+
+
+    //双亲委派：类加载的过程中 将加载请求委派给父类执行 避免类被重复加载 防止核心类被篡改 扩展-》引用--》启动
+
+
 }
