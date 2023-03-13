@@ -9,9 +9,6 @@ public class Summary2 {
      *  before、after、连接点、切入点
      *
      *
-     *
-     *
-     *
      *  ioc的bean加载过程
      *
      *
@@ -52,6 +49,10 @@ public class Summary2 {
      * 但是AOP用到了动态代理
      *
      *
+     * IOC 怎么使用
+     * 先创建bean的xml
+     * 使用ClassPathXmlApplicationContext读取xml 生成context对象
+     * 然后使用context.getBean创建对象
      *
      *
      */

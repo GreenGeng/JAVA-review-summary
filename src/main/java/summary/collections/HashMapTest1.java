@@ -38,6 +38,45 @@ public class HashMapTest1 {
      * put插入的时候 也使用了CAS 如果当前hash里没有元素再插入
      *
      *
+     * 为什么hashmap用红黑树不用别的树
+     * 因为二叉查询树会成链表
+     * b树、b+树适合磁盘数据查询
+     * AVL树是高度平衡的 因为他支持完全平衡 查询会比红黑树快 但是插入的话比红黑树效率低 因为旋转次数多
+     *
+     *
+     * rehash
+     * 就是把原来的值放到新桶里
+     *
+     *
+     * 1.7的头插法
+     * 插到头节点之后 整体要往下移
+     * 源码
+     *  //转移原哈希表中的元素到新的哈希表中
+     *     void transfer(Entry[] newTable, boolean rehash) {
+     *         //获取新数组容量
+     *         int newCapacity = newTable.length;
+     *         //遍历老哈希表Entry[]数组
+     *         for (Entry<K,V> e : table) {
+     *             //当这个Entry不为空
+     *             while(null != e) {
+     *                 //将e的下一个节点赋值给next
+     *                 Entry<K,V> next = e.next;
+     *                 //一般不需要重新计算哈希值
+     *                 if (rehash) {
+     *                     e.hash = null == e.key ? 0 : hash(e.key);
+     *                 }
+     *                 //重新计算需要在新数组插入的数组下标
+     *                 int i = indexFor(e.hash, newCapacity);
+     *                 //将e元素插入到newTable[i]的头上，即将e的next属性指向newTable[i]
+     *                 e.next = newTable[i];
+     *                 //将e元素插入到newTable[i]上（头插法）
+     *                 newTable[i] = e;
+     *                 //开始转移下一个元素
+     *                 e = next;
+     *             }
+     *         }
+     *     }
+     *
      *
      */
 }
