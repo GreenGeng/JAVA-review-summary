@@ -106,7 +106,11 @@ public class Summary1
      * from on join where group by having select distinct union order by limit
      *
      *
-     *
+     * in和exists的区别
+     * 都是先查内部表然后跟外部表做笛卡尔积
+     * in适合内部表数据少
+     * exists适合内部表数据大
+     * not in 有时候不会走索引 所以not exists比not in 效率好
      *
      *
      * 

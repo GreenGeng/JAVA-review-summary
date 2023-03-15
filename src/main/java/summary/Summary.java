@@ -11,6 +11,8 @@ public class Summary {
     // 只要是new 都是两个对象 都是false
     // 如果没有new 在缓存范围里的true 在范围外是false
     //包装类的缓存：-128到127
+    //只要有一个new就是两个对象
+    //（只有在都没使用new并且数值在缓存范围内才是一个对象）
 
     //方法也可以加final 加了就不能修改了
 
@@ -210,5 +212,14 @@ public class Summary {
 
     //双亲委派：类加载的过程中 将加载请求委派给父类执行 避免类被重复加载 防止核心类被篡改 扩展-》引用--》启动
 
+    /**
+     * Exception有两种
+     * 运行时异常和编译时异常
+     * 编译时异常要显示的抛出或者try-catch（类似读取文件时会提醒文件可能不存在）
+     * 运行时异常就是运行了代码才知道的异常
+     *
+     * 编译异常：filenotfoundException classnotfoundexception
+     * 运行时异常：nullpointerexception classcastexception 越界
+     */
 
 }
