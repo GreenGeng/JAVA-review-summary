@@ -220,6 +220,12 @@ public class Summary {
      *
      * 编译异常：filenotfoundException classnotfoundexception
      * 运行时异常：nullpointerexception classcastexception 越界
+     *
+     *
+     * 反射获取到类的信息后怎么创建对象
+     * 直接反射来的类的对象newInstance
+     * 或者先获取到构造器再newInstance
+     *
      */
 
 }
