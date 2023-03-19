@@ -48,10 +48,18 @@ public class Summary1 {
      * 里面的地址换成自己的dns地址
      * 执行payload 之后 dnslog就会有记录 就说明是有漏洞的
      * 审计时候搜索SnakeYaml 然后注意看是否转换成TAG 全局搜索tag:yaml.org 如果没转就可能存在漏洞
-     * SnakeYml使用时候用yml.dump和load
+     * SnakeYml使用时候主要用yml.dump和load
      * 如果使用了yml的函数做序列化 没有转成tag:yaml就会存在漏洞
      * 漏洞原理
-     * SnakeYml是解析yml格式的 用于Java对象序列化，可以构造payload执行命令执行
+     * SnakeYml是把yml文件转成map对象的 在解析yml过程中 可以构造payload执行命令执行
+     * 防护:
+     *  加上new SafeConstructor()
+     *  Yaml yaml = new Yaml(new SafeConstructor());
+     *
+     *
+     * shiro反序列化
+     * shiro里内置了一个默认的加密key 可被攻击者通过伪造的cookie去触发反序列化漏洞
+     * cookie获取rememberme base64解密  再AES解密 再反序列
      *
      *
      *

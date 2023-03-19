@@ -1,4 +1,4 @@
-package code.jwt;
+package code.safe.jwt;
 
 import io.jsonwebtoken.*;
 
