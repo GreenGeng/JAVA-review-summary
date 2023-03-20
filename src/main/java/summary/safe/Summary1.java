@@ -11,6 +11,11 @@ import java.security.NoSuchAlgorithmException;
 
 public class Summary1 {
     /**
+     * 序列化是对象转为字符串
+     * 反序列化是字符串转对象
+     * 读取yml文件就是把字符串转为对象
+     * 所以是反序列化漏洞
+     *
      * mybatis为了防止sql注入需要使用#代替$
      * 但是在like模糊查询的时候 #是不起作用的
      * 推荐使用like concat 因为concat里面可以使用#

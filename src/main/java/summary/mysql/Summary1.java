@@ -3,6 +3,9 @@ package summary.mysql;
 public class Summary1
 {
     /**
+     * mysql如果报错说连接不上 可能是没开启
+     * sudo mysql.server start 开启服务
+     *
      * eq_ref:唯一索引---
      * ref:非唯一索引
      *
