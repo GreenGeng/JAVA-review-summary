@@ -78,5 +78,11 @@ public class HashMapTest1 {
      *     }
      *
      *
+     *
+     * hashet底层是hashmap
+     * hashset可以为null
+     * hashmap的key-val都可以为空 但是key只能有一个null
+     * hashtable的key-val都不能为空
+     *
      */
 }

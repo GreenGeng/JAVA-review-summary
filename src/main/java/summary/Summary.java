@@ -201,10 +201,6 @@ public class Summary {
     // FileInputStream  FileOutputStream  FileReader FileWriter
 
 
-    //双亲委派：类加载的过程中 将加载请求委派给父类执行 避免类被重复加载 防止核心类被篡改 扩展-》引用--》启动
-    //  怎么打破双亲委派
-
-    //spring动态代理 不是AOP
 
 
     /**
@@ -226,15 +222,19 @@ public class Summary {
     //接口幂等性
     /**
      * 唯一索引
-     * 加悲观锁
+     * 加悲观锁、乐观锁
      * 加分布式锁
      * token机制：请求前先申请一个token（唯一的） 然后token作为key 用户信息作为value存储到redis里
      * 发请求时候带着token 去redis里查找 请求结束 删除token 重复请求的化 redis的key已经被
      * 删除了 就直接返回重复请求的错误信息
      *
-     *
-     *
      */
 
+    //双亲委派：类加载的过程中 将加载请求委派给父类执行 避免类被重复加载 防止核心类被篡改 扩展-》引用--》启动
+    //怎么打破双亲委派
+    //spring动态代理 不是AOP
+    //消息被重复消费
+    //实现弹幕
+    //有时间看下那个测试开发工具实现的逻辑
 
 }

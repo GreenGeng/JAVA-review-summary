@@ -30,7 +30,7 @@ public class Summary1 {
      *
      *  websocket的实现
      *  先注入 ServerEndpointExporter这个对象是开启websocket
-     *  前端编写ajax 调用后端接口 @ServerEndpoint(value = "/p2p")
+     *  前端编写ajax 调用后端接口 @ServerEndpoint(value = "/p2p") 这个是前端给服务器发送连接请求
      *  然后里面就是具体的实现
      *  @OnOpen
      *  @OnClose
