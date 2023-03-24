@@ -52,6 +52,7 @@ public class Summary3
      * 否则就acquire尝试去等待获取锁
      *
      *
+     //Thread.sleep(0)的作用:是为了让GC线程有机会被操作系统选中 从而GC执行
      *
      *
      *

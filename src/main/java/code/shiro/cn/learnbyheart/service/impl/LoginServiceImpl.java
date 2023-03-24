@@ -35,7 +35,7 @@ public class LoginServiceImpl implements LoginService {
         otherPermits.add(permission1);
 
         Role role1 = new Role(1L,"admin",adminPermits);
-        Role role2 = new Role(1L,"other",otherPermits);
+        Role role2 = new Role(2L,"other",otherPermits);
 
         Set<Role> adminRole = new HashSet<>();
         adminRole.add(role1);
