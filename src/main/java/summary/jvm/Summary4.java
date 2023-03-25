@@ -14,4 +14,14 @@ public class Summary4 {
     // 一个抢红包算法
     //线程交替打印1-100 分奇偶
 
+    /**
+    valueof里面调用的还是tostring 直接toString是没有判空的 valueOf是给toString做了一次判空
+    public static String valueOf(Object obj) {
+        return (obj == null) ? "null" : obj.toString();
+    }
+    public String toString() {
+        return getClass().getName() + "@" + Integer.toHexString(hashCode());
+    }
+    **/
+
 }
