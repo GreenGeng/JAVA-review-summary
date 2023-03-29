@@ -1,6 +1,8 @@
 package summary.safe;
 
 import org.apache.commons.codec.binary.Base64;
+import org.yaml.snakeyaml.Yaml;
+import org.yaml.snakeyaml.constructor.SafeConstructor;
 import summary.mq.Base;
 
 import javax.crypto.KeyGenerator;
@@ -53,6 +55,7 @@ public class Summary1 {
      * 里面的地址换成自己的dns地址
      * 执行payload 之后 dnslog就会有记录 就说明是有漏洞的
      * 审计时候搜索SnakeYaml 然后注意看是否转换成TAG 全局搜索tag:yaml.org 如果没转就可能存在漏洞
+     * 就相当于给构造器加了一份白名单 如果里面的内容可以转成tag就没问题
      * SnakeYml使用时候主要用yml.dump和load
      * 如果使用了yml的函数做序列化 没有转成tag:yaml就会存在漏洞
      * 漏洞原理
@@ -74,6 +77,9 @@ public class Summary1 {
         KeyGenerator keygen = KeyGenerator.getInstance("AES");
         SecretKey deskey = keygen.generateKey();
         System.out.println(base64.encodeToString(deskey.getEncoded()));
+
+             Yaml yaml = new Yaml(new SafeConstructor());
+
     }
 
 

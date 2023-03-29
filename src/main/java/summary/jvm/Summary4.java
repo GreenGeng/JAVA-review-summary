@@ -22,6 +22,15 @@ public class Summary4 {
     public String toString() {
         return getClass().getName() + "@" + Integer.toHexString(hashCode());
     }
+
+
+     OOM的原因
+     加载的文件或图片过大
+     线程数量过多（阻塞队列设置太大）
+     解决：
+     即使回收资源
+     使用统一的线程池管理
+
     **/
 
 }

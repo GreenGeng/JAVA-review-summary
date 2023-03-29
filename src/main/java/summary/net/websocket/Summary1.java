@@ -27,7 +27,6 @@ public class Summary1 {
      *  netty可以自定义协议，基于nio
      *
      *
-     *
      *  websocket的实现
      *  先注入 ServerEndpointExporter这个对象是开启websocket
      *  前端编写ajax 调用后端接口 @ServerEndpoint(value = "/p2p") 这个是前端给服务器发送连接请求
