@@ -30,7 +30,8 @@ public class Summary1 {
      * CRLF注入
      *
      * XXE
-     * http、
+     * http、https file ftp mailto jar netdoc
+     *
      *
      */
 }

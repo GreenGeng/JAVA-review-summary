@@ -5,6 +5,8 @@ public class HashMapTest1 {
      * 安全的hashmap有哪些
      * concurrntHashmap、synchronizedMap、Hashtable
      *
+     * hashtable是在增删改查的方法上都增加了synchronized锁
+     *
      *
      *
      *  //vector和map的区别
