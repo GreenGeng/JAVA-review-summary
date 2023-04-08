@@ -1,9 +1,8 @@
-package summary.safe;
+package summary.safe.shiro;
 
 import org.apache.commons.codec.binary.Base64;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.SafeConstructor;
-import summary.mq.Base;
 
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
