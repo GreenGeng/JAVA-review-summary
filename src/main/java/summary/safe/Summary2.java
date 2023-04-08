@@ -12,10 +12,13 @@ public class Summary2 {
      * ssrf: 服务器端访问另一个URL没有过滤
      * yml反序列化：防护：safeConstruct()->转tag标签 类似白名单过滤
      * shiro反序列化：
-     * 目录遍历：禁止外界指定文件，文件名不能包含目录，限定文件名只有字母和数字
-     * 文件上传：上传巨大文件会导致DOS（限制文件大小），上传可执行脚本文件（注意文件名后缀限制）
-     * rce：代码执行 输入过滤 输出编码
+     * rce（命令执行、代码执行）：代码执行 输入过滤 输出编码
      * xml注入：XXE 常见关键字： http、https file ftp mailto jar netdoc
+     *
+     * 文件操作
+     * 目录遍历（任意文件下载）：禁止外界指定文件，文件名不能包含目录，限定文件名只有字母和数字
+     * 任意文件上传：上传巨大文件会导致DOS（限制文件大小），上传可执行脚本文件（注意文件名后缀限制）
+     * 文件包含漏洞
      *
      *  反序列化漏洞
      *  Apache commons colletions 这个库利用在了很多组件上
@@ -26,30 +29,58 @@ public class Summary2 {
      *  Runtime的exec方法底层使用了ProcessBuilder类
      *  processBuilder.start();和runtime.exec()都是执行命令的操作
      *
+     * 应用场景：
+     * OA系统、CMS系统、热门框架、中间件
      *
      * 泛微OA漏洞
      * sql注入
+     * 远程代码执行
+     *
      *
      * 若依漏洞
      * shiro反序列化（使用了低版本的shiro组件）rememberme 绕过方式
      * yml反序列化（定时任务-添加任务那里 因为这里用到了yml解析）
-     * sql注入
+     * sql注入:在系统管理的角色管理的查询里
      * 任意文件读取：代码查看下载接口代码
-     *
+     * Thymeleaf模板注入
      *
      * 组件漏洞
      * redis
      *  指令安全、端口安全、Lua脚本安全、SSL代理
      *
-     *
      * es
      *
      * tomcat
+     * 任意文件上传
+     * 文件读取和包含
+     * 反序列化
+     *
+     * jboss
+     * 反序列化
+     *
+     * weblogic
+     * 反序列化
+     *
+     * ssrf
+     * 任意文件读取、文件上传
+     * 远程代码执行
+     *
      *
      * nginx
+     * 文件解析：
+     * 目录遍历
+     *
      *
      * docker
      *  docker逃逸 Docker版本 < 18.09.2，runC版本< 1.0-rc6。
+     *
+     * spring
+     * xxe
+     *
+     * springboot
+     *
+     * springcloud
+     *
      *
      *
      *  邮件安全

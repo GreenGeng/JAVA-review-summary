@@ -88,8 +88,6 @@ public class Summary1
      * 加悲观锁 读取的时候加悲观锁 别的线程就没办法读
      *
      *
-     *
-     *
      * count(*)返回的是所有
      * count（列）会过滤null
      * count(*)和count(1)没什么区别 最好使用count(*)因为这个是规范
@@ -118,6 +116,5 @@ public class Summary1
      * not in 有时候不会走索引 所以not exists比not in 效率好
      *
      *
-     * 
      */
 }

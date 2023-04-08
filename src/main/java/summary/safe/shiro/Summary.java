@@ -43,8 +43,6 @@ public class Summary {
      *  随机生成密钥
      *
      *
-     *
-     *
      * md5和base64的区别
      * md5是不可逆的  base64可逆
      *

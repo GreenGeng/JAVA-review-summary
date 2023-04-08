@@ -61,7 +61,7 @@ public class Summary1 {
      * SnakeYml是把yml文件转成map对象的 在解析yml过程中 可以构造payload执行命令执行
      * 防护:
      *  加上new SafeConstructor()
-     *  Yaml yaml = new Yaml(new SafeConstructor());
+     *  Yaml yaml = new Yaml(new SafeConstructor()); 内置的函数可以把文件内容转换为对应的tag标签 相当于白名单过滤
      *
      *
      * shiro反序列化
