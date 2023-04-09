@@ -1,4 +1,4 @@
-package summary.safe.shiro;
+package summary.security.shiro;
 
 import org.apache.commons.codec.binary.Base64;
 import org.yaml.snakeyaml.Yaml;

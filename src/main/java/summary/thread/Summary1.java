@@ -44,10 +44,12 @@ public class Summary1 {
      *
      *
      * yield和sleep的区别
-     * 两者很像  都是放弃当前CPU
+     * 两者很像  都是会放弃当前CPU
      * sleep让给其他线程运行是不考虑线程优先级的 yield只会让给相同或者更高优先级的线程
      * sleep进入阻塞状态 yield是就绪状态可能很快就又能执行
      * sleep会抛异常 yield没有声明抛异常
+     * sleep和yield都不会释放锁（锁是共享的数据资源）
+     *
      *
      * IO多路复用
      * IO文件的输入与输出
@@ -81,6 +83,13 @@ public class Summary1 {
      *
      * redis分布式锁里的setnx和cas挺像的
      *（cas vab）
+     *
+     *
+     * 多线程去访问同一个共享资源 就会出现 线程不安全的问题 所以就通过加锁的方式
+     * 在一个时间里只能有一个线程能访问该资源
+     *
+     * 单核CPU只能执行一个线程
+     * 如果要start一个线程就需要CPU调度
      *
      */
 }

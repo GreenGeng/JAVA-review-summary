@@ -1,4 +1,4 @@
-package summary.safe.ssrf;
+package summary.security.ssrf;
 
 public class Summary1 {
     /**

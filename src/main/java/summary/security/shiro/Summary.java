@@ -1,4 +1,4 @@
-package summary.safe.shiro;
+package summary.security.shiro;
 
 public class Summary {
     /**

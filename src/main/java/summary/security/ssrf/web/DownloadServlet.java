@@ -1,4 +1,4 @@
-package summary.safe.ssrf.web;
+package summary.security.ssrf.web;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

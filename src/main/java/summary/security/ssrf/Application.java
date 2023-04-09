@@ -1,4 +1,4 @@
-package summary.safe.ssrf;
+package summary.security.ssrf;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

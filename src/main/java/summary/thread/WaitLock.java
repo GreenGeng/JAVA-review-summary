@@ -2,6 +2,13 @@ package summary.thread;
 
 public class WaitLock {
     /**
+     * wait是暂停线程 yield和sleep都是暂停
+     * notify是唤醒
+     * wait需要notify唤醒
+     * sleep是到时间之后 获取到CPU调度就会唤醒
+     * yield是就绪状态 随时获取到CPU就随时唤醒
+     *
+     *
      * wait会释放锁 sleep不会
      * 他们都是阻塞状态
      *

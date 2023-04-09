@@ -21,13 +21,11 @@ public class Summary {
      * 解决了阻塞
      *
      *
-     *
      * http1.1增加了长链接 但是是串行的文件传输效率低
      * http2.0使用二进制格式 多路复用 头部压缩（缩短header的大小 避免重复header信息传输）
      * keep-alive就是长链接
      * http3 基于UDP传输 通过quic协议保证安全 前两个都是tcp协议
      * @Todo 有时间看下quic协议
-     *
      *
      *
      *
