@@ -35,7 +35,7 @@ public class Summary1 {
      *
      *
      *  Python2打开HttpServer
-     *  python -m SimpleHTTPServer
+     *  python -m SimpleHTTPServer port
      *
      *  python3打开HttpServer
      *  python -m http.server
