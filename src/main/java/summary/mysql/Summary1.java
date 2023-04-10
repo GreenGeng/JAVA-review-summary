@@ -52,7 +52,6 @@ public class Summary1
      * 加索引 但是注意like使用要命中索引 选择合适的列 区分度高的列
      * 减少子查询 因为要创建临时表 查询完又得删除  速度会影响 用union代替
      * 少用join join也是嵌套查询 数据量大的话性能就会低
-     * 减少join使用
      * or后面的索引不会命中 用in代替or（也可以用union代替or）
      * in可以用exists代替
      * 避免在where使用 ! < >

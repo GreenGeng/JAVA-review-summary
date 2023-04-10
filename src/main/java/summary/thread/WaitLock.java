@@ -7,6 +7,8 @@ public class WaitLock {
      * wait需要notify唤醒
      * sleep是到时间之后 获取到CPU调度就会唤醒
      * yield是就绪状态 随时获取到CPU就随时唤醒
+     * 都会释放CPU资源的 不然别的线程就算抢到了锁 也运行不了
+     *
      *
      *
      * wait会释放锁 sleep不会
