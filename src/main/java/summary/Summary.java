@@ -174,7 +174,7 @@ public class Summary {
 
     //来未来
     //模版模式
-    // treemap （是红黑树的中序遍历） 是根据key元素的comparator to实现的
+    // treemap （是树的中序遍历） 是根据key元素的comparator to实现的(默认是根据key来排序的,那就可以把count放在key的位置就行，但是count可能重复 作为key的话数据会丢)
     // 分布式会用哪些 redis分布式 springcloud
     // 分布式原理
 

