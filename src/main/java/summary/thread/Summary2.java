@@ -27,9 +27,10 @@ public class Summary2 {
      *
      *
      *  volatile怎么保证可见性
-     *  在该变量进行写操作时候会多一个 lock指令，将当前行数据写到主存里
-     *  根据缓存一致性，其他线程内存中存储的该变量的值就会失效
-     *  然后重新从主存里获取最新的值
+     *  通过屏障保证的 Load屏障保证强制从主存读取 store平直强制刷回主存
+     *
+     *  synchronized保证可见性
+     *  也是通过屏障 enter指令有load屏障的作用 exit指令有store屏障的作用
      *
      *
      *
@@ -44,14 +45,6 @@ public class Summary2 {
      *  所以之后有一个线程能获取到锁 因为只有获取到锁+1 没有获取到就等待
      *  （类似setnx里的给key赋值）
      *
-     *
-     *
-     *
-     *  synchronized 怎么可见性
-     *   monitorenter指令后面有一个load屏障 执行refresh操作 会把新值刷新到主存里
-     *   monitorexit指令后面有一个store屏障 让线程把修改到变量执行flush操作 刷到主存里
-     *   monitorenter----load屏障 --refresh
-     *   monitorenter----store屏障---flush
      *
      *
      *  synchronzied怎么有序性

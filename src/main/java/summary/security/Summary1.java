@@ -212,9 +212,16 @@ public class Summary1 {
      * docker pull 镜像名字
      * docker run -it --name jdk1.8 -d primetoninc/jdk:1.8
      * （前面的jdk1.8是别名 后面的primetoninc/jdk:1.8是镜像名）
+     * 如果docker pull很慢的话 就给docker重启一下
      *
      *
-     *
+     * weblogic 反序列化分两种
+     * 一种是基于T3协议 CVE-2020-14645 CVE-2020-14825
+     * 一种是基于XML的反序列化
+     * T3协议：
+     * RMI 通信时会将数据进行序列化后传输，同样的接收数据后反序列化进行接收，正常RMI通信使用的是JRMP协议，而在Weblogic的RMI通信中使用的是T3协议，T3是weblogic独有的一个协议，相比于JRMP多了如下协议：
+     * 服务端可以持续追踪监控客户端是否存活（心跳机制），通常心跳的间隔为60秒，服务端在超过240秒未收到心跳即判定与客户端的连接丢失。
+     * 通过建立一次连接可以将全部数据包传输完成，优化了数据包大小和网络消耗。
      *
      */
 }
