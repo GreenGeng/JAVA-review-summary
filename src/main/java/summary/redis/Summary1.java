@@ -2,7 +2,7 @@ package summary.redis;
 
 public class Summary1 {
     /**
-     * rdb和aof怎么配合使用
+     * rdb（bgsave）和aof怎么配合使用
      * 使用rdb恢复内存状态会丢失大量数据
      * 使用AOF重放性能比较低
      *
@@ -32,9 +32,6 @@ public class Summary1 {
      * 创建一个子进程，子进程将历史插入语句写到临时的AOF文件里，主进程一边处理请求，一边把写命令加到aof文件和缓冲区里
      * 子进程完成后给父进程发送一个信号
      * 父进程把重写缓冲区里的命令加载到新AOF文件里
-     *
-     *
-     *
      *
      *
      * 布隆过滤器

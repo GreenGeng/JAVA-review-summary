@@ -66,6 +66,7 @@ public class Summary1 {
      * redis
      *  指令安全、端口安全、Lua脚本安全、SSL代理
      * Redis RCE复现及简单分析（CVE-2022-0543）
+     * Redis基于主从复制的RCE 4.x/5.x 复现(失败 不知道为什么 换了redis5 4 都不行 后期装了Ubuntu 下载redis4还是不行 反弹shell也不行  流程其实很简单 就是先启动redis 然后就是用payload去验证这个RCE)
      *
      * es
      * Elasticsearch-Kibana （CVE-2018-17246）
@@ -86,7 +87,6 @@ public class Summary1 {
      * ssrf
      * CVE-2021-40438（有点难）
      * CVE-2014-4210
-     *
      *
      *
      * docker
@@ -135,9 +135,11 @@ public class Summary1 {
      * Weblogic前台验证绕过+后台命令执行漏洞（CVE-2020-14882、CVE-2020-14883）
      * Weblogic前台验证绕过漏洞（CVE-2020-14750）
      * WebLogic任意文件上传漏洞(CVE-2019-2618)
-     * Weblogic反序列化漏洞 (CVE-2020-14825)
-     * Weblogic远程代码执行（CVE-2020-14645） 复现失败了
+     * Weblogic反序列化漏洞 (CVE-2020-14825) 缺几个jar包
+     * Weblogic远程代码执行（CVE-2020-14645） 不知道为什么复现失败了
      * Weblogic SSRF漏洞 (CVE-2014-4210)
+     * Weblogic反序列化漏洞 CVE-2023-21839：
+     *
      *
      *
      * shiro
@@ -181,7 +183,6 @@ public class Summary1 {
      * 反弹shell前提是已经进入对方服务器 ，但是直接在对方服务器上操作命令就不安全
      * 所以通过对方服务器上连接攻击者本地开启的服务器
      * 然后就两者之间发请求 并把输入重定向到攻击者端
-     *
      * 除了nc 还有bash -i等
      *
      * 怎么反弹
@@ -207,12 +208,25 @@ public class Summary1 {
      * 什么是nc nc的作用
      * nc可以端口扫描、文件传输、开启端口、端口转发、远程控制
      *
+     *
      * docker使用
      * docker search Java
      * docker pull 镜像名字
      * docker run -it --name jdk1.8 -d primetoninc/jdk:1.8
      * （前面的jdk1.8是别名 后面的primetoninc/jdk:1.8是镜像名）
      * 如果docker pull很慢的话 就给docker重启一下
+     * docker ps 查看正在运行的容器
+     * docker ps -a 查看所有容器包括没有运行的
+     *
+     * doocker删除镜像
+     * 先docker images 得到ID
+     * 然后 docker rmi 镜像ID
+     * 如果提示在使用中
+     * 就docker ps -a 查看容器Id
+     * 然后docker stop    容器id
+     * 然后删除容器
+     * 然后在删除镜像
+     *
      *
      *
      * weblogic 反序列化分两种
@@ -222,6 +236,19 @@ public class Summary1 {
      * RMI 通信时会将数据进行序列化后传输，同样的接收数据后反序列化进行接收，正常RMI通信使用的是JRMP协议，而在Weblogic的RMI通信中使用的是T3协议，T3是weblogic独有的一个协议，相比于JRMP多了如下协议：
      * 服务端可以持续追踪监控客户端是否存活（心跳机制），通常心跳的间隔为60秒，服务端在超过240秒未收到心跳即判定与客户端的连接丢失。
      * 通过建立一次连接可以将全部数据包传输完成，优化了数据包大小和网络消耗。
+     *
+     *
+     *
+     * 配置环境变量 vim ~/.bash_profile
+     * Mac查看Java地址 /usr/libexec/java_home -V
+     *
+     *
+     * 学会漏洞利用
+     * redis
+     *  未授权访问，记住版本 就可以直接登陆
+     *  RCE 记住版本就可以直接用攻击去执行命令
+     *
+     *
      *
      */
 }
