@@ -30,5 +30,18 @@ public class Summary2 {
      * Master发送完rdb快照 就开始向slave发送缓存区的写命令
      * Slave完成对快照的载入 开始接受命令请求
      *
+     *
+     *
+     * redis分布式锁
+     * redisson
+     * 创建一个lockKey, 使用redisson去获取锁 用Lock去加锁 加锁内部编写逻辑和过期时间
+     * 锁续命：
+     * 源码中使用了定时任务
+     *
+     * setnx
+     * jedis.setNx(key,threadId)
+     * jedis.expire
+     *
+     *
      */
 }
