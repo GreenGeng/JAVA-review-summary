@@ -51,8 +51,15 @@ public class Summary1 {
      *
      *
      * es在aggregation里terms field就是类似groupby
+     * term是关键字精确查询 terms是多关键字精确查询
+     * sort可以用来排序
      *
-     *
+     * Java里就是构造sourceBuilder
+     * boolQueryBuilder.filter(QueryBuilders.termsQuery("impobj_domain", domain));
+     * sourceBuilder.query(boolQueryBuilder);
+     * searchRequest.source(sourceBuilder);
+     * searchResponse = restHighLevelClient.search(searchRequest, RequestOptions.DEFAULT);
+     * 然后解析searchResponse
      *
      *
      */
