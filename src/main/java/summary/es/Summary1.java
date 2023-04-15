@@ -50,6 +50,7 @@ public class Summary1 {
      *
      *
      *
+     * es在aggregation里terms field就是类似groupby
      *
      *
      *
