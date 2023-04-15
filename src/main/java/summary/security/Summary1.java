@@ -227,6 +227,9 @@ public class Summary1 {
      * 然后删除容器
      * 然后在删除镜像
      *
+     * poc漏洞验证
+     * payload 漏洞利用
+     *
      *
      *
      * weblogic 反序列化分两种
