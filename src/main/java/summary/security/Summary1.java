@@ -228,8 +228,8 @@ public class Summary1 {
      * 然后在删除镜像
      *
      * poc漏洞验证
-     * payload 漏洞利用
-     *
+     * EXP 漏洞利用
+     * payload 例如使用了一条恶意SQL语句，使网站出现报错回显。这条语句就是造成报错回显的Payload。
      *
      *
      * weblogic 反序列化分两种
