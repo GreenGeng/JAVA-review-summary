@@ -206,6 +206,13 @@ public class Summary1 {
      * 1099 指RMI服务的端口
      * java -cp target/marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer http://127.0.0.1/css/#ExportObject 1389
      *
+     * marshalsec和ysoserial的区别
+     * 都是常见的反序列化工具 还有Freddy
+     * 只是里面内容是不一样的
+     *
+     *
+     *
+     *
      *
      * CRLF是回车+换行（\r\n）的简称 十六进制编码分别为0x0d和0x0a
      * Http header与http body是用两个CRLF分割的 浏览器就是根据这两个CRLF来取出HTTP内容并显示出来
@@ -224,6 +231,18 @@ public class Summary1 {
      * docker ps 查看正在运行的容器
      * docker ps -a 查看所有容器包括没有运行的
      *
+     * 查看docker容器里nginx的配置文件
+     * docker ps得到容器id
+     * docker exec -it 容器id  /bin/bash 就进去了
+     *
+     * docker需要修改nginx配置文件 需要先按照vim
+     *  apt-get update
+     *  apt-get install -y vim --allow-unauthenticated
+     * 	apt-get install -y vim
+     *
+     * 重新加载nginx
+     * docker exec -it  nginx -s reload
+     *
      * doocker删除镜像
      * 先docker images 得到ID
      * 然后 docker rmi 镜像ID
@@ -233,7 +252,6 @@ public class Summary1 {
      * 然后删除容器
      * 然后在删除镜像
      * docker compose exec 是docker compose 的执行命令
-     *
      *
      *
      * poc漏洞验证
