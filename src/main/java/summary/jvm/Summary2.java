@@ -67,7 +67,6 @@ public class Summary2 {
      *  方法区存放的是常量、静态变量
      *
      *
-     *  finalizer是什么
      *
      *  访问对象的方式
      *  句柄、指针

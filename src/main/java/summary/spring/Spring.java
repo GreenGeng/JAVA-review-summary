@@ -18,13 +18,10 @@ public class Spring {
      * spring事务 @Transaction
      *
      *
-     *
-     *
      * springboot自动装配的原理
      * 通过添加注解@SprigbootApplication或者@EnableAutoConfiguration
      * 会自动去扫描读取spring.factories文件，
      * 将配置内容加载进spring容器里
-     *
      *
      *
      * 循环依赖
@@ -42,14 +39,9 @@ public class Spring {
      *
      *
      *
-     *
-     *
      * JDK 动态代理和AOP的实现
      * 实现InvocationHandler接口重写invoke方法
      * 通过反射的方式创建动态代理对象Proxy.newProxyInstance
-     *
-     *
-     *
      *
      *
      *

