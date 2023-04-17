@@ -1,12 +1,10 @@
-package code.safe.yml;
+package code.security.yml;
 
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.SafeConstructor;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 
 public class TestSnakeYml {

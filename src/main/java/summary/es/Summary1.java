@@ -20,8 +20,6 @@ public class Summary1 {
      * 滚动查询 scroll查询  基于快照的形式 会返回一个scroll_id 这个是游标的位置 类似初始位置
      * 
      *
-     *
-     *
      * 索引
      * 数据文档
      *

@@ -212,8 +212,6 @@ public class Summary1 {
      *
      *
      *
-     *
-     *
      * CRLF是回车+换行（\r\n）的简称 十六进制编码分别为0x0d和0x0a
      * Http header与http body是用两个CRLF分割的 浏览器就是根据这两个CRLF来取出HTTP内容并显示出来
      *
