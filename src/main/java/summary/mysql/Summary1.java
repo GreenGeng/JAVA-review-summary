@@ -5,6 +5,7 @@ public class Summary1
     /**
      * mysql如果报错说连接不上 可能是没开启
      * sudo mysql.server start 开启服务
+     * 或者使用brew来启动brew services restart mysql
      * 开启redis 服务 redis-server
      *
      *

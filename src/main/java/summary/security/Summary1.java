@@ -252,9 +252,21 @@ public class Summary1 {
      * docker compose exec 是docker compose 的执行命令
      *
      *
-     * poc漏洞验证
-     * EXP 漏洞利用
-     * payload 例如使用了一条恶意SQL语句，使网站出现报错回显。这条语句就是造成报错回显的Payload。
+     * poc和payload的区别
+     * poc是一整个文件 payload是这个文件里最具有攻击的那句代码
+     * 例如
+     * poc:
+     * public class Test{
+     *     try {
+     *             Runtime.getRuntime().exec("open /System/Applications/Calculator.app");
+     *         }catch (Exception e){
+     *
+     *         }
+     * }
+     * payload:
+     * open /System/Applications/Calculator.app
+     * EXP：漏洞利用
+     *
      *
      *
      * weblogic 反序列化分两种
